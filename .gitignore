@@ -216,3 +216,11 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Symbiont
+chrome-extension/node_modules/
+chrome-extension/dist/
+
+# Symbiont
+node_modules/
+chrome-extension/dist/

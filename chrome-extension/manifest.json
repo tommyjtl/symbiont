@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "Symbiont",
+  "version": "0.1.0",
+  "description": "A runnable learning layer inside any documentation page.",
+  "permissions": ["storage", "alarms", "offscreen"],
+  "host_permissions": [
+    "http://127.0.0.1:7341/*",
+    "http://localhost:7341/*",
+    "ws://127.0.0.1:7341/*",
+    "ws://localhost:7341/*",
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background/service-worker.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "Symbiont"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content/main.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["overlay/styles.css", "overlay/xterm.css"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

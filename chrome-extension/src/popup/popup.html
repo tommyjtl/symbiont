@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Symbiont</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Symbiont</h1>
+      <p class="tagline">Runnable learning layer for docs</p>
+    </header>
+    <section class="status" id="status">
+      <span class="dot" id="status-dot"></span>
+      <span id="status-text">Checking backend...</span>
+    </section>
+    <section class="recipes" id="recipes"></section>
+    <section class="settings">
+      <label for="domain-whitelist">Domain whitelist</label>
+      <p class="field-hint">Symbiont only runs on listed domains (one per line).</p>
+      <textarea
+        id="domain-whitelist"
+        rows="4"
+        placeholder="mojolang.org"
+        spellcheck="false"
+      ></textarea>
+
+      <label for="backend-url">Backend URL</label>
+      <input type="url" id="backend-url" placeholder="http://127.0.0.1:7341" />
+      <button type="button" id="save-settings">Save</button>
+    </section>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>
