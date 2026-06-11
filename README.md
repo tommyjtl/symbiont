@@ -23,7 +23,7 @@ Roadmap and future work: [`TODO.md`](TODO.md). Design notes: [`DISCUSSION.md`](D
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/) — installed **and running**
 - Python 3.12+
 - Node.js 18+
-- Google Chrome
+- Google Chrome (or any other Chromium-based browsers.)
 
 Verify Docker before continuing:
 
